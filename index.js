@@ -27,3 +27,12 @@ function isPalindrome(str) {
         return (str[0]===str[str.length-1])
     }
 }
+
+function addUpTo(ar, ind) {
+    if (ind>0) {
+        return addUpTo(ar, ind-1)+ar[ind]
+    }
+    else {
+        return ar[ind]
+    }
+}
