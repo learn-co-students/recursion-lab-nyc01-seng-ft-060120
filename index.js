@@ -36,3 +36,12 @@ function addUpTo(ar, ind) {
         return ar[ind]
     }
 }
+
+function maxOf(ar) {
+    if (ar.length>1) {
+        return Math.max(ar[0], maxOf(ar.slice(1,ar.length)))
+    }
+    else {
+        return ar[0]
+    }
+}
