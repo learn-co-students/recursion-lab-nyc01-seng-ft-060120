@@ -45,5 +45,33 @@ function reverseString(myString) {
   }
 
   function addUpTo(ary, index){
-      return index ? ary[index] + addUpTo(ary, --index) : false
+      return index ? ary[index] + addUpTo(ary, --index) : ary[0]
+  }
+
+  function sumOfArray(array){
+      let sum = 0
+      for (i=0; i < array.length; i++){
+          sum += array[i]
+      }
+      return sum
+  }
+
+  function sumUsingPT(array){
+      return array.reduce((total, n)=> total + n)
+  }
+
+  function sumWithRec(array){
+      if (array.length > 1){
+      return array[0] + sumWithRec(array.slice(1,array.length))
+      } else {
+          return array[0]
+      }
+  }
+
+  function maxOf(array){
+      if (array.length > 1){
+          return array[0] > array[array.length -1] ? maxOf(array.slice(0, array.length -1)) : maxOf(array.slice(1, array.length))
+      } else {
+          return array[0]
+      }
   }
