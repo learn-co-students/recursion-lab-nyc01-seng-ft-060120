@@ -45,5 +45,5 @@ function reverseString(myString) {
   }
 
   function addUpTo(ary, index){
-      return index ? ary[index] + addUpTo(ary, --index) : ary[index]
+      return index ? ary[index] + addUpTo(ary, --index) : false
   }
