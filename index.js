@@ -39,7 +39,7 @@ function reverseString(myString) {
 
   function sumOfArray(array){
       let sum = 0
-      for (i=0; i < array.length; i++){
+      for (let i=0; i < array.length; i++){
           sum += array[i]
       }
       return sum
